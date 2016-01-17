@@ -17,13 +17,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a class="grey">Filtres:</a></li>
-        {% for endpoint, url in list_routes() %}
+        {% for endpoint, url in list_navbar() %}
         <li {% if endpoint == request.endpoint %}class="active"{% endif %}>
-          <a href="{{ url }}">{{ endpoint.capitalize() }}</a>
+          <a <!--href="{{ url }}"--> {{ endpoint.capitalize() }}</a>
         </li>
         {% endfor %}
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right"> 
         <!-- <li><a href="/">haha</a></li> -->
       </ul>
     </div>

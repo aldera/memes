@@ -1,5 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<h1>{% block title %}{% endblock %}</h1>
+  {% for meme in memes %}
+    {{ meme|safe }}
+  {% endfor %}
 {% endblock %}
