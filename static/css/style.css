@@ -8,6 +8,21 @@
   z-index: 1337;
 }
 
+#memes img,
+#memes video,
+#memes audio {
+  display: block;
+  max-width:230px;
+  max-height:150px;
+  width: auto;
+  height: auto;
+}
+
+#memes {
+  /* Prevent vertical gaps */
+  line-height: 0;
+}
+
 .grey {
   color: #999999 !important;
   cursor: default;

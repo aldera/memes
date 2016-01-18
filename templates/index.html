@@ -1,7 +1,9 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+  <section id="memes">
   {% for meme in memes %}
     {{ meme|safe }}
   {% endfor %}
+  </section>
 {% endblock %}

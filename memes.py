@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals, print_function
+import random
 
 from flask import current_app as app
 from path import Path
@@ -13,7 +14,9 @@ def get_memes(filter=None):
         return []
     else:
         d = Path(app.config['UPLOADS_DEFAULT_DEST'])
-        return complete_memes_tags(d.files())
+        res = complete_memes_tags(d.files())
+        random.shuffle(res)
+        return res
 
 
 def complete_memes_tags(data):
