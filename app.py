@@ -39,6 +39,11 @@ def favicon():
     return app.send_static_file('img/favicon.ico')
 
 
+@app.route('/robots.txt')
+def robots():
+    return app.send_static_file('robots.txt')
+
+
 # Error handling
 @app.errorhandler(404)
 def page_not_found(e):
