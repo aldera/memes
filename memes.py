@@ -29,7 +29,7 @@ def complete_memes_tags(data):
         if ext in app.config['IMAGE_EXT']:
             res.append('<img src="/meme/{0}" alt="{0}">'.format(filename))
         elif ext in app.config['VIDEO_EXT']:
-            res.append('<video src="/meme/{0}" autoplay loop controls>'
+            res.append('<video src="/meme/{0}" autoplay loop controls muted>'
                        "C'est la PLS ! Votre navigateur ne semble pas supporter les vidéos intégrées.\n"
                        'Vous pouvez toujours <a href="/meme/{0}">la télécharger</a> '
                        'et la visionner avec votre lecteur vidéo préféré !'
